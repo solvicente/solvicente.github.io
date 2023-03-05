@@ -1,12 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Curriculum Vitae</title>
+
 </head>
+
 <body>
-    
+    <!-- SECCION INICIO -->
+    <section class="inicio" id="inicio">
+        <div class="contenido-seccion">
+
+            <header>
+
+                <div class="nav-bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i> <!--3 RAYITAS-->
+                </div>
+
+        <!--MENÚ-->
+                <nav id="nav" class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobremi">Sobre mí</a>
+                    <a href="#conocimientos">Conocimientos</a>
+                    <a href="#formacion">Formación</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+
+            </header>
+
+        <!--ENCABEZADO-->
+            <div class="info">
+                <h1>NOMBRE APELLIDO</h1>
+                <h2>OCUPACION, CARACTERISTICA 1, CARACTERISTICA 2</h2>
+
+        <!--ICONOS-->
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="foto">
+                <img src="img/foto.jpg" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section class="sobremi" id="sobremi">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Sobre Mí</h2>
+            <h3>Características</h3>
+
+            <p class="especial">Breve descripción</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nobis! Sit, veniam aut omnis est suscipit itaque tempore fugiat! Repellat, necessitatibus. Neque quis, reprehenderit fugit dolore voluptate nam eum reiciendis!</p>
+
+            <div class="fila">
+                <div class="col">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="titulo-detalle">Perfil</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, provident esse. Nesciunt quod eveniet dolorem necessitatibus iure, suscipit similique provident fugiat excepturi commodi</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <span class="titulo-detalle">Ubicación</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, provident esse. Nesciunt quod eveniet dolorem necessitatibus iure, suscipit similique provident fugiat excepturi commodi</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="titulo-detalle">Intereses</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, provident esse. Nesciunt quod eveniet dolorem necessitatibus iure, suscipit similique provident fugiat excepturi commodi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONOCIMIENTOS -->
+    <section class="conocimientos" id="conocimientos">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Conocimientos</h2>
+            <h3>Mis habilidades</h3>
+            
+        <!--FILA 1-->
+            <div class="fila">
+                <div class="col">
+                    <span>ITEM 1</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="item1"></div>
+                        <span>98%</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <span>ITEM 2</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="item2"></div>
+                        <span>70%</span>
+                    </div>
+                </div>
+
+            </div>
+
+        <!--FILA 2-->
+            <div class="fila">
+                <div class="col">
+                    <span>ITEM 3</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="item3"></div>
+                        <span>90%</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <span>ITEM 4</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="item4"> 
+                        </div>
+                        <span>85%</span>
+                    </div>
+                </div>
+
+            </div>
+
+        <!--FILA 3-->
+            <div class="fila">
+                <div class="col">
+                    <span>ITEM 5</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="item5"></div>
+                        <span>95%</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <span>ITEM 6</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="item6"></div>
+                        <span>75%</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCION FORMACION -->
+    <section class="formacion" id="formacion">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Formación</h2>
+            <h3>Educación y Experiencia Laboral</h3>
+            <div class="info">
+                <div class="col">
+                    <span class="titulo">Educación</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>Año - Año</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Título</h4>
+                                <p>Establecimiento</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>Año - Año</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Título</h4>
+                                <p>Establecimiento</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col">
+                    <span class="titulo">Experiencia Laboral</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>Años trabajados</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Empresa</h4>
+                                <p>Puesto</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>Años trabajados</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Empresa</h4>
+                                <p>Puesto</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <h3>Datos de contacto</h3>
+
+            <div class="fila">
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-phone"></i> Teléfono
+                    </h2>
+                    <span class="info-contacto">xxxxxxxx</span>
+                </div>
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-envelope"></i> Correo
+                    </h2>
+                    <span class="info-contacto">micorreo@gmail.com</span>
+                </div>
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-globe"></i> Página Web
+                    </h2>
+                    <span class="info-contacto">miweb.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>
