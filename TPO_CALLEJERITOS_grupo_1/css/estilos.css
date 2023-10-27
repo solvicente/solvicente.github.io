@@ -1,0 +1,218 @@
+@import "reset.css";
+
+body {
+    background-color: #212730;  /*color de fondo*/
+    background-image: url(/img/fondo_marca.svg);  /*decorado del fondo*/
+    background-repeat: repeat;  /*se repite hasta ocupar toda la pantalla*/
+    background-position: center center; /*centrado*/
+}
+
+/*BARRA DE MENU*/
+.menu {
+    background-color: #EC1F26;  
+    min-width: 100%;  /*ocupa todo el ancho de la pantalla*/
+    height: auto;
+    padding: 10px 0 10px 30px; /*despega el contenido del borde*/
+}
+
+.menu .encabezado {
+    display: flex; /*contenedor flex*/
+    justify-content: space-between; /*distribuye un item en cada extremo*/
+}
+
+/*CONTENIDO BARRA DE MENU*/
+header .logo .marca {
+    width: 40%; /*tamaño logo*/
+    padding-top: 3px;
+   /* margin: 8px 0 6px 0;*/
+}
+
+/*CUADRO CONTENIDO MENU HAMBURGUESA*/
+header .nav {
+    position: fixed; /*fija el menu*/
+    background-color: #FBAC4B;
+    margin: 10px 0; /*espacio entre el borde y el cuadro*/
+    padding: 20px;  /* espacio alrededor del texto*/
+    width: 40%; /*ancho*/
+    height: auto; /*alto*/
+    right: 0; /*lo ubico a la derecha*/
+    top: 0;  /*lo ubico en el borde superior*/
+    border-radius: 20px; /*esquinas redondeadas*/
+    transform: translateX(-10px); /*ubicacion*/
+    z-index: 90; /*posiciono por delante de los otros elementos*/
+    cursor: pointer; /*forma del cursor como manito*/   
+    display: none; /*para q este visible solo cuando se clickea soble el menu*/
+    
+}
+
+/*CONTENIDO MENU HAMBURGUESA*/
+header .nav a {
+    font-family: 'Montserrat', sans-serif; /*tipografía*/
+    font-size: 14px;  /*tamaño de letra*/
+    display: block; /*cada item ocupa una linea*/
+    color: #000;
+    text-decoration: none; /*saco el subrayado*/
+    text-align: center; /*alineación*/
+    margin-bottom: 11%;
+    padding: 0;
+    transition: .1s;  /*duracion de la animacion*/ 
+}
+
+/*MENU HAMBURGUESA*/
+header .navbar {
+    position: fixed; /*queda fijo*/
+    z-index: 99; /*se posiciona delante de los demas objetos*/
+    margin: 8px 15px;
+    right: 0;
+    top: 0;
+    transform: translateX(25px);
+    cursor: pointer;
+    transition: .2s;
+    
+}
+
+/*ICONO MENU  HAMBURGUESA*/
+header .navbar .patitas {
+    width: 50%;
+}
+
+.navbar:hover {
+    scale: 1.1; /*animacon: se agranda cuando pasa el mouse*/
+}
+
+.nav a:hover {
+    color: #EC1F26;
+    font-family: 'Aref Ruqaa Ink', serif;
+    scale: 1.2;
+}
+
+
+
+
+
+/* 
+estilos pantallas pequeñas en horizontal y vertical min 320px y max 480px (celulares)
+
+vertical*//*
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+
+ */
+
+/*
+horizontal */
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+header .nav {
+    width: 35%;    
+    }
+}
+
+
+/* estilos pantallas medianas minimo 481px max 768px (ipads-tabletas)
+
+vertical*/
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation:portrait) and (orientation:landscape) { 
+    .menu {      
+        padding: 10px 0 10px 30px; /*despega el contenido del borde*/
+    }
+
+    header .logo .marca {
+        width: 70%; /*tamaño logo*/
+        padding-top: 3px;
+   /* margin: 8px 0 6px 0;*/
+    }
+
+    header .nav {
+        width: 45%;
+        transform: translateX(-26px);
+        padding: 35px 25px 15px 25px;
+    }
+
+    header .nav a {        
+        font-size: 22px;
+	}
+
+    header .navbar {      
+        margin: 8px 30px;
+    }
+
+    header .navbar .patitas {
+        width: 80%;
+    }
+}
+
+/*
+
+ estilos pantallas grandes min 769px max 1024px (pantallas pequeñas, laptops)*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) { 
+    .menu {      
+        padding: 10px 0 10px 50px; /*despega el contenido del borde*/
+    }
+
+    header .logo .marca {
+        width: 80%; /*tamaño logo*/
+        padding-top: 4px;
+    }
+
+    header .nav {
+        width: 30%;
+        transform: translateX(-40px);
+        padding: 35px 20px 15px 20px;
+        border-radius: 30px;
+    }
+
+    header .nav a {        
+        font-size: 22px;
+	}
+
+    header .navbar {      
+        margin: 9px 60px;
+    }
+
+    header .navbar .patitas {
+        width: 90%;
+    }
+}
+
+/*
+ pantallas muy grandes min 1025px(pc escritorio-pantallas grandes)
+*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+    .menu {      
+        padding: 10px 0 10px 50px; /*despega el contenido del borde*/
+    }
+
+    header .logo .marca {
+        width: 90%; /*tamaño logo*/
+        padding-top: 4px;
+    }
+
+    header .nav {
+        width: 40%;
+        transform: translateX(-40px);
+        padding: 60px 15px 15px 15px;
+        border-radius: 40px;
+    }
+
+    header .nav a {        
+        font-size: 24px;
+	}
+
+    header .navbar {      
+        margin: 9px 60px;
+    }
+
+    header .navbar .patitas {
+        width: 100%;
+    }
+}
+
+    /*
+
+ esta ultima no creo que la tomemos porque es para pantallas extra grandes la pongo a modo de ejemplo
+
+	@media screen and (min-width: 1201px) {
+
+}

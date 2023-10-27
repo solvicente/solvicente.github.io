@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.29mm" height="11.29mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1129 1129"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:white;fill-rule:nonzero}
+    .fil0 {fill:url(#id0)}
+   ]]>
+  </style>
+  <radialGradient id="id0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.46487 -2.10855 -2.10855 -1.46487 2273 3136)" cx="181" cy="1118" r="3875" fx="181" fy="1118">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FEC053"/>
+   <stop offset="0.329412" style="stop-opacity:1; stop-color:#F2203E"/>
+   <stop offset="0.65098" style="stop-opacity:1; stop-color:#B729A8"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#5342D6"/>
+  </radialGradient>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2871699705104">
+   <path class="fil0" d="M556 1129c-114,-1 -315,-54 -440,-223 -66,-87 -106,-192 -114,-300 -4,-53 0,-102 10,-153 24,-123 90,-233 183,-316 101,-89 229,-135 363,-138 65,-1 132,11 193,31 48,16 88,38 125,62 29,19 55,40 78,62 31,30 59,63 81,97 32,49 55,100 70,148 41,133 29,279 -30,405 -74,158 -233,323 -519,323z"/>
+   <path class="fil1" d="M400 249c-84,0 -152,68 -152,152l0 328c0,84 68,152 152,152l328 0c84,0 152,-68 152,-152l0 -328c0,-84 -68,-152 -152,-152l-328 0zm328 697l-328 0c-120,0 -217,-97 -217,-217l0 -328c0,-120 97,-217 217,-217l328 0c120,0 217,97 217,217l0 328c0,120 -97,217 -217,217z"/>
+   <path class="fil1" d="M564 435c-72,0 -130,58 -130,130 0,72 58,130 130,130 72,0 130,-58 130,-130 0,-72 -58,-130 -130,-130zm0 325c-108,0 -195,-88 -195,-195 0,-108 88,-195 195,-195 108,0 195,88 195,195 0,108 -88,195 -195,195z"/>
+   <path class="fil1" d="M814 358c0,26 -21,47 -47,47 -26,0 -47,-21 -47,-47 0,-26 21,-47 47,-47 26,0 47,21 47,47z"/>
+  </g>
+ </g>
+</svg>

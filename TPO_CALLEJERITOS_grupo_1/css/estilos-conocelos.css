@@ -1,0 +1,96 @@
+@import "estilos-galeria.css";
+
+.container-caracteristicas-raza {
+    width: 80%; /* Ancho máximo para pantalla de celular */
+    color: #EC1F26;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 10px; /* Espacio interno */
+    background-color: white;
+    border: 1px solid #ccc; /* Borde fino */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0px 0px 5px 2px #ccc; /* Efecto de relieve */
+    
+}
+
+
+.boton-nombre-conoce{
+    /* Define el color de fondo del botón */
+    background-color: #EC1F26;
+    /* Define el color del texto en el botón */
+    color: white;
+    /*negrita*/    
+    font-weight: bold;
+    /*tamaño de la fuente*/
+    font-size: 16px;    
+    /* Establece un borde redondeado en la parte superior izquierda del botón */
+    border-radius: 0% 40% 40% 40%;
+    /* Establece el espacio interno (relleno) del botón */
+    padding: 18px 16px 18px 16px;
+    /* Establece la posición del botón como absoluta, respecto de su padre que se llama: contenedor-hijo */
+    position: absolute;    
+    /* Define el valor de z-index para controlar la superposición de elementos y boton-nombre queda superpuesto a la imagen del perro */
+    z-index: 2;   
+    /*posicion desde el margen izquierdo*/ 
+    left: 7%;
+}
+
+.contenedor-padre-conocelos {       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    /*flex-direction: column;
+    padding-top:10%;
+    padding-bottom: 25%;
+    padding-left:10%;   */  
+}
+
+.gato-flotante {
+    width: 35%;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;    
+    left: 4%;
+}
+
+.contenedor-hijo-conocelos {
+    /* Establece el color de fondo del contenedor hijo como blanco */
+    background-color: white;
+    /* Agrega un espacio interno alrededor del contenido */
+    padding: 15px;
+    /* Agrega un espacio en la parte superior del contenedor */
+    margin-top: 20px;
+    /* Utiliza un sistema de flexbox para organizar el contenido */
+    display: flex;
+    /* Establece la dirección del flujo del contenido como una columna */
+    flex-direction: column;
+    /* Alinea el contenido en el centro horizontalmente */
+    align-items: center;
+    /* Establece el ancho del contenedor en un 60% del ancho de su contenedor padre */
+    width: 75%;
+    /* Agrega bordes redondeados a las esquinas del contenedor */
+    border-radius: 20px;
+    /* Establece la posición del contenedor como relativa, respecto de .boton-nombre */
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.contenedor-mapa {
+    background-color: white;
+    display: flex;
+    width: 70%;
+    padding: 8px;
+    border-radius: 15px;
+    margin: 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-mapa iframe {
+    min-width: 50%;
+    border-radius: 20px;
+}
+
+

@@ -1,0 +1,438 @@
+/* Importa los estilos de otro archivo CSS */
+@import "estilos.css";
+
+
+* {
+
+    /* Elimina la decoración de texto (subrayados, etc.) de todos los elementos */
+    text-decoration: none;
+}
+
+/* Estilos generales para el cuerpo y otras partes del documento */
+body { 
+
+    /* Especifica la fuente del texto */
+    font-family: 'Montserrat Medium', Arial, sans-serif;
+
+    /* Define el tamaño de la fuente */
+    font-size: 10px;
+
+    /* Define cómo se comportará el desplazamiento en el documento en este caso es "Suave" */
+    scroll-behavior: smooth;
+
+    /* Ajusta el modelo de caja CSS para todos los elementos */
+    box-sizing: border-box;
+}
+
+/* Estilos para el contenedor principal*/
+.contenido {
+
+    /* Centra el contenedor horizontalmente */
+    margin: 0 auto;
+
+    /* Añade un relleno alrededor del contenido */
+    padding: 10px;
+}
+
+/* Estilos para el título */
+.titulo {
+
+    /* Utilizo flexbox para el diseño */
+    display: flex;
+
+    /* Establece si los elementos flexibles puedan permanecer en una línea o se pueden ajustar en varias líneas.*/ 
+    flex-wrap: wrap;
+
+    /* Centra los elementos horizontalmente en el contenedor */
+    justify-content: center;
+
+    /* Centra los elementos verticalmente en el contenedor */
+    align-items: center;
+
+    /* Centra el texto */
+    text-align: center;
+
+    /* Define el color del texto */
+    color: #000;
+
+    /* Define el color de fondo del título */
+    background-color: #FBAC4B;
+
+    /* Elimina cualquier borde alrededor del título */
+    border: none;
+
+    /* Define el ancho del título al 70% del contenedor padre */
+    width: 70%;
+
+    /* Define la altura del título a 35px */
+    height: 35px;
+
+    /* Añade un margen en la parte superior del título */
+    margin-top: 10px;
+
+    /* Añade un relleno en la parte inferior del título */
+    padding-bottom: 10px; 
+
+    /* Redondea las esquinas del título */
+    border-radius: 20px;
+
+    /* Esta propiedad desplaza el elemento a lo largo del eje X. Aquí el elemento se moverá a la derecha un 33% de su propio ancho. */
+    transform: translateX(33%);
+}
+
+h2 {
+    /* Establece el tamaño de la fuente del texto*/
+    font-size: 15px;
+
+    /* Añade un relleno en la parte superior de los elementos, útil para dar espacio alrededor del texto. */
+    padding-top: 5px;
+}
+
+.destacado {
+
+    /* Esta propiedad cambia la fuente del texto dentro del elementos .destacado. */
+    font-family: 'Aref Ruqaa Ink', serif;
+
+    /* Hace que el texto sea en cursiva. */
+    font-style: italic;
+    font-size: 18px;
+}
+
+/*Estilo para el contenedor*/
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Estilos para las cartas*/
+.card {
+
+    /* Establece el ancho de las cartas al 90% del contenedor padre. */
+    width: 90%; 
+
+    /* Permite que las cartas tengan una altura automática basada en su contenido interno. */
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+
+    /* Esta propiedad cambia el color de fondo de las cartas. */
+    background-color: #f9f9f9;
+
+    /* Esta propiedad hace que las esquinas de las cartas sean redondas*/
+    border-radius: 20px;
+
+    /* Esta propiedad centra horizontalmente el texto dentro de las cartas. */
+    text-align: center; 
+}
+
+/*Animación de la carta cuando se pasa el cursor sobre ella */
+.card:hover {
+
+    /* Esta propiedad añade una sombra alrededor de las cartas cuando se pasa el cursor sobre ellas. El valor indica el desplazamiento horizontal, el desplazamiento vertical, el desenfoque y el color de la sombra, respectivamente. */
+    box-shadow: 0px 0px 5px #fff;
+}
+
+/* Estilos para el boton del título dentro de la carta*/
+.boton_titulo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    /* Esta propiedad cambia el color de fondo del botón. */
+    background-color: #82C6C7;
+
+    /* Esta propiedad cambia el color del texto dentro del botón. */
+    color: #050505;
+
+    /* Esta propiedad cambia la forma del cursor a una mano cuando se pasa sobre el botón, indicando que es interactivo. */
+    cursor: pointer;
+
+    /* Esta propiedad elimina cualquier borde alrededor del botón. */
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    font-size: 14px;
+    margin: 0 5% 0 5%;
+    padding: 6px 0 6px 0;
+
+    /* Hace que el botón se animen suavemente durante un período de tiempo especificado*/
+    transition: 0.1s;
+}
+
+/* Cambia el color de fondo y de texto del botón cuando se pasa el cursor sobre él */
+.boton_titulo:hover {
+    background-color: #EC1F26;
+    color: #fff;
+
+    /* Esta propiedad aumenta el tamaño del botón en un 5% cuando se pasa el cursor sobre él. */
+    scale: 1.05;
+}
+
+/* Estilos para las cajas */
+.caja {
+    padding: 5%;
+}
+
+/* Estilos para las imágenes dentro de las cajas */
+.imagen_caja {
+
+    /* Esta propiedad establece el ancho de las imágenes al 100% del contenedor padre. */
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+.subir {
+    display: none; /* Oculta el botón por defecto */
+
+    /* Fija la posición del botón en un lugar específico de la pantalla*/
+    position: fixed;
+
+    /* Posiciona el botón a 10px desde la parte derecha de la pantalla. */
+    right: 10px;
+    background-color: #EC1F26;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 7px 8px;
+    border-radius: 10px;
+
+    /* Añade un margen en la parte inferior del botón */
+    margin-bottom: 2px;
+
+    /* Posiciona el botón a 10px desde la parte inferior de la pantalla. */
+    bottom: 10px;
+}
+
+.subir:hover {
+
+    /* Cambia la escala (tamaño) del botón cuando se pasa el cursor sobre él */
+    scale: 1.025;
+}
+
+/* Cambia los colores de fondo y texto del botón cuando se hace clic en él (estado activo) */
+.subir:active {
+    background-color: #FBAC4B;
+    color: #000;
+}
+
+/*estilos pantallas pequeñas en horizontal y vertical min 320px y max 480px (celulares)
+vertical*/
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+
+    h2 {
+        font-size: 18px;
+    }
+     
+    .destacado {
+        font-size: 21px;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 18px;
+    }
+}
+
+/*horizontal*/
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+    /* Estilos para las cartas */
+    .card {
+        width: 80%; 
+        margin: 10px 0; 
+        padding: 5px;
+        padding-bottom: 5%;
+    }
+
+    /* Estilos para las imágenes dentro de las cajas */
+    .imagen_caja {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 16px;
+    }
+}
+
+/* estilos pantallas medianas minimo 481px max 768px (ipads-tabletas)
+vertical*/
+@media screen and (min-device-width: 481px) and (max-width: 768px) and (orientation:portrait) {
+    .titulo {
+        width: 60%;
+        transform: translateX(33%);
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+     
+    .destacado {
+        font-size: 21px;
+    }
+
+    /* Estilos para las cartas */
+    .card {
+        width: 65%;
+        padding-bottom: 3%;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size:18px;
+    }
+}
+
+/*horizontal*/
+@media screen and (min-device-width: 481px) and (max-width: 768px) and (orientation:landscape) {
+    h2 {
+        font-size: 27px;
+    }
+     
+    .destacado {
+        font-size: 30px;
+    }
+
+    /* Estilos para las cartas */
+    .card {
+        /* Ancho del 45% para mostrar dos cartas por fila */
+        width: 40%; 
+        margin: 10px;
+        padding: 5px;
+        padding-bottom: 2%;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 16px;
+    }
+}
+
+/* estilos pantallas grandes min 769px max 1024px (pantallas pequeñas, laptops)*/
+/*vertical*/
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    /* Estilos para el título */
+    .titulo {
+        width: 60%;
+        transform: translateX(33%);
+    }
+     
+    h2 {
+        font-size: 23px;
+        padding-top: 5px;
+    }
+     
+    .destacado {
+        font-size: 26px;
+    }
+
+    /* Estilos para las cartas */
+    .card {
+        width: 40%;
+        padding-bottom: 1.5%;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 24px;
+    }
+}
+
+/*horizontal*/
+@media screen and (min-device-width: 769px) and (max-width: 1024px) and (orientation:landscape) {
+    h2 {
+        font-size: 27px;
+    }
+     
+    .destacado {
+        font-size: 30px;
+    }
+    
+    /* Estilos para las cartas */
+    .card {
+        width: 40%;
+        padding-bottom: 2%;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 16px;
+    }
+}
+
+/* pantallas muy grandes min 1025px(pc escritorio-pantallas grandes)*//*vertical*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .titulo {
+        width: 60%;
+        transform: translateX(33%);
+    }
+
+    h2 {
+        font-size: 28px;
+        padding-top: 5px;
+    }
+     
+    .destacado {
+        font-size: 32px;
+    }
+
+    /* Estilos para las cartas */
+    .card {
+        width: 25%;
+        padding-bottom: 1%;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 17px;
+    }
+}
+
+/* esta ultima es para pantallas extra grandes*//*vertical*/
+@media screen and (min-width: 1201px) {
+    /* Estilos para el título */
+    .titulo {
+        width: 60%;
+        transform: translateX(33%);
+        padding-bottom: 2%;
+    }
+
+    h2 {
+        font-size: 35px;
+        padding-top: 5px;
+    }
+     
+    .destacado {
+        font-size: 38px;
+    }
+
+    /* Estilos para las cartas */
+    .card {
+        width: 20%;
+        margin: 10px;
+        padding: 5px;
+        padding-bottom: 1%;
+    }
+
+    /* Estilos para las imágenes dentro de las cajas */
+    .imagen_caja {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Estilos para el botón del título dentro de la carta */
+    .boton_titulo {
+        font-size: 18px;
+    }
+
+    /* Estilos para las cajas */
+    .caja {
+        align-items: center;
+        justify-content: center;
+        padding: 5%;
+    }
+}

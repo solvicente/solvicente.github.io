@@ -1,0 +1,180 @@
+@import "estilos.css";
+
+* {
+    font-family: 'Montserrat Medium', Arial, sans-serif;
+    
+}
+
+.contenedor-padre {
+    /* Establece un color de fondo*/
+    background-color: #212730;
+    /* Establece una imagen de fondo utilizando la URL del archivo SVG */
+    background-image: url(/img/fondo_marca.svg);
+    /* Centra la imagen de fondo tanto horizontal como verticalmente */
+    background-position: center center;
+    /*repite la imagen la cantidad de veces q sea necesariaa para que cubra toda la pantalla*/
+    background-repeat: repeat;
+    /* Utiliza un sistema de cuadrícula para organizar el contenido interno */
+    display: grid;
+    /* Crea columnas de cuadrícula que se ajustan automáticamente y tienen un ancho mínimo de 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Alinea el contenido de las celdas de la cuadrícula en el centro horizontal */
+    justify-items: center;
+    /* Alinea el contenido de la cuadrícula en el centro horizontal y distribuye el espacio restante de manera uniforme */
+    justify-content: space-evenly;
+}
+
+.contenedor-hijo {
+    /* Establece el color de fondo del contenedor hijo como blanco */
+    background-color: white;
+    /* Agrega un espacio interno alrededor del contenido */
+    padding: 20px;
+    /* Agrega un espacio en la parte superior del contenedor */
+    margin-top: 20px;
+    /* Utiliza un sistema de flexbox para organizar el contenido */
+    display: flex;
+    /* Establece la dirección del flujo del contenido como una columna */
+    flex-direction: column;
+    /* Alinea el contenido en el centro horizontalmente */
+    align-items: center;
+    /* Establece el ancho del contenedor en un 60% del ancho de su contenedor padre */
+    width: 70%;
+    /* Agrega bordes redondeados a las esquinas del contenedor */
+    border-radius: 30px;
+    /* Establece la posición del contenedor como relativa, respecto de .boton-nombre */
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.caja-imagen img {
+    width: 100%; /* Estiliza las imágenes dentro de elementos con la clase .caja-imagen */
+    border-radius: 20px; /*redondea los bordes*/
+    height: auto; /* Asegura que la altura de la imagen se ajuste automáticamente según el ancho */
+    transition: 0.3s;  /* Agrega transicion suave a la transformación */
+}
+/* Estilos aplicados cuando el cursor se encuentra sobre elementos con la clase .caja-imagen */
+.caja-imagen :hover {
+    transform: scale(1.1) translateX(0.5px);  /* Realiza una transformación de escala (zoom) y un desplazamiento horizontal cuando se coloca el cursor */
+}
+
+.boton-nombre {
+    /* Define el color de fondo del botón */
+    background-color: #EC1F26;
+    /* Define el color del texto en el botón */
+    color: white;
+    /*negrita*/    
+    font-weight: bold;
+    /*tamaño de la fuente*/
+    font-size: 16px;    
+    /* Establece un borde redondeado en la parte superior izquierda del botón */
+    border-radius: 0% 40% 40% 40%;
+    /* Establece el espacio interno (relleno) del botón */
+    padding: 18px 16px 18px 16px;
+    /* Establece la posición del botón como absoluta, respecto de su padre que se llama: contenedor-hijo */
+    position: absolute;    
+    /* Define el valor de z-index para controlar la superposición de elementos y boton-nombre queda superpuesto a la imagen del perro */
+    z-index: 2;   
+    /*posicion desde el margen izquierdo*/ 
+    left: 7%;
+}
+
+.caja-texto {
+    text-align: center;/* Centra el texto horizontalmente en el contenedor */
+    padding: 10px;/* Agrega un espacio interno alrededor del texto */
+}
+
+.caja-texto p {
+    /* propiedades del texto */
+    font-family: 'Aref Ruqaa Ink';
+    font-weight: 600;
+    padding: 2px;
+}
+
+.caja-info {
+    background-color: #82c6c7;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding: 15px;      
+}
+.caja-info a {
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    color: inherit; /* Heredar el color del texto del padre */
+    transition: color 0.3s; /* Agregar una transición suave al cambio de color */
+}
+  
+.caja-info:hover {
+    background-color: #EC1F26;/* Cambiar el color de fondo al pasar el mouse sobre el enlace */
+}
+
+.caja-info a:hover {
+    color: #fff; /* Cambiar el color del texto al pasar el mouse sobre el enlace */    
+}
+.subir {
+    display: none; /* Oculta el botón por defecto */
+
+    /* Fija la posición del botón en un lugar específico de la pantalla*/
+    position: fixed;
+
+    /* Posiciona el botón a 10px desde la parte derecha de la pantalla. */
+    right: 10px;
+    background-color: #EC1F26;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 7px 8px;
+    border-radius: 10px;
+
+    /* Añade un margen en la parte inferior del botón */
+    margin-bottom: 2px;
+
+    /* Posiciona el botón a 10px desde la parte inferior de la pantalla. */
+    bottom: 10px;
+}
+
+.subir:hover {
+
+    /* Cambia la escala (tamaño) del botón cuando se pasa el cursor sobre él */
+    scale: 1.025;
+}
+
+/* Cambia los colores de fondo y texto del botón cuando se hace clic en él (estado activo) */
+.subir:active {
+    background-color: #FBAC4B;
+    color: #000;
+}
+
+/*-------------horizontal-------------*/
+
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+    .contenedor-hijo {
+        width: 55%; 
+        height: 285px;   
+        padding: 14px;    
+    }
+    
+    .boton-nombre {
+        left: 5%;       
+    }
+
+    .caja-imagen :hover {
+        transform: scale(1.05);  /* Realiza una transformación de escala (zoom) cuando se coloca el cursor */
+    }
+
+    .caja-texto {
+        padding: 0;
+    }
+    
+    .caja-texto p {
+        font-size: 12px;
+        font-weight: 530;
+        padding: 1px;
+    }
+
+    .caja-info {
+        margin-top: 9px;
+        padding: 8px;
+    }
+}

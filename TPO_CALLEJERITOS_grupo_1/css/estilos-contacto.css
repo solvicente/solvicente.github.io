@@ -1,0 +1,233 @@
+
+
+/* Importa los estilos de otro archivo CSS */
+
+
+@import "estilos-registro.css";
+
+/* Estilos para el formulario de contacto */
+.formularioContacto {
+
+  /* Alinea el texto a la izquierda */
+  text-align: left;
+
+  /* Los elementos flex hijos se apilan verticalmente */
+  flex-direction: column;
+
+  /* Centra los elementos flex hijos en el eje principal */
+  justify-content: center;
+
+ /* Ancho del formulario */
+  width: 270px;
+
+  /* Altura automática del formulario */
+  height: auto;
+
+  /* Espaciado alrededor del formulario */
+  padding: 0 8px 40px 8px;
+
+  /* Borde del formulario*/
+  border: 2px solid #ccc;
+
+  /* Color de fondo */
+  background-color: #EC1F26;
+
+  /* Sombra*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  /* Esquinas redondeadas */
+  border-radius: 20px;
+
+  /* Margen  */
+  margin: 15px 15px 5px 15px;
+}
+
+
+/* Estilos para el título2 */
+.titulo2 {
+
+  /* Se utiliza el modelo de caja flexible */
+  display: flex;
+
+  /* Los elementos flex hijos se apilan verticalmente */
+  flex-direction: column;
+
+  /* Centra los elementos en el eje transversal */
+  align-items: center;
+
+  /* Alinea el texto al centro */
+  text-align: center;
+
+  /* Centra los elementos flex hijos en el eje principal */
+  justify-content: center;
+
+  /*padding: center;*/
+
+  /*Ajustar la posición del elemento en todas las direcciones */
+  transform: translate(0px,130px);
+
+}
+
+
+.titulo2 h2 {
+
+  /* Tipografía dentro de titulo2 */
+  font-family: 'Aref Ruqaa Ink', serif;
+
+  /* Tamaño de fuente*/
+  font-size: 20px;
+
+  /* Color de letra*/
+  color: aliceblue;
+}
+
+
+.titulo2 h3 {
+  font-family: 'Aref Ruqaa Ink', serif;
+  font-size: 15px;
+  color: aliceblue;
+}
+
+
+/* Estilos para la imagen flotante2 */
+.imagen_flotante2 {
+
+  /* Ancho de la imagen */
+  width: 90px;
+
+ /* Posicionamiento absoluto de la imagen */
+  position: absolute;
+
+  /* Nivel de apilamiento de la imagen */
+  z-index: 2;
+
+  /* Posición desde el borde inferior del elemento*/
+  bottom: 0;
+
+  transform: translate(110px,250px);
+}
+
+
+/*-------------horizontal-------------*/
+
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  .imagen_flotante2 {
+    transform: translate(350px,280px);
+  }
+
+  .titulo {
+
+    /* Mueve el título 50px a la derecha en dispositivos pequeños con orientación horizontal */
+    
+    transform: translate(50px, 30px);
+  }
+
+  .titulo2 {
+
+    /* Mueve el título2 155px a la derecha y 300px hacia arriba en dispositivos pequeños con orientación horizontal */
+    transform: translate(155px, -190px);
+  }
+
+  .titulo2 h2 {
+
+    font-size: 15px;
+  }
+
+  .titulo2 h3 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+
+  .imagen_flotante2 {
+
+    /* Ancho de la imagen en dispositivos medianos con orientación vertical */
+    width: 180px;
+
+    /* Mueve la imagen 0px  en dispositivos medianos con orientación vertical */
+    transform: translate(0px, 0px);
+
+    /* Posición desde el borde izquierdo del elemento*/
+    left: 150px;
+  }
+
+  .formularioContacto {
+
+    /* Ancho del formulario en dispositivos medianos con orientación vertical */
+    width: 425px;
+  }
+
+  .titulo2 {
+    
+    /* Mueve el título2 10px a la derecha y 180px hacia abajo en dispositivos medianos con orientación vertical */
+    transform: translate(10px, 190px);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  
+  .titulo {     
+    transform: translate(140px,30px);
+  }
+  .imagen_flotante2 {
+    transform: translate(570px, 100px);
+    width: 130px;
+    height: auto; 
+  }
+  .formularioContacto {  
+    width: 450px;
+     }
+
+     .titulo2 {
+    
+      /* Mueve el título2 10px a la derecha y 180px hacia abajo en dispositivos medianos con orientación vertical */
+      transform: translate(250px, -230px);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+ 
+  .formularioContacto {  
+     width: 500px;
+     transform: translate(100px,30px);
+      }
+  
+  .titulo {     
+    transform: translate(200px,30px);
+    width: 350px;
+    height: 30px;
+ 
+  }
+  .imagen_flotante2 {
+    transform: translate(330px, -280px);
+  }
+  .titulo2{
+    transform: translate(0px,150px);
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  
+  .formularioContacto {  
+    width: 900px;
+    transform: translate(500px,30px);
+     }
+ 
+ .titulo {     
+  transform: translate(800px,30px);
+   width: 350px;
+   height: 30px;
+
+ }
+ .imagen_flotante2 {
+  transform: translate(840px, -10px);
+  width: 200px;
+
+ }
+
+ .titulo2{
+  transform: translate(0px,250px);
+}
+}

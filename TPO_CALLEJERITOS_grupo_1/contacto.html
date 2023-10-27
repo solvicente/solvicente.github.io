@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/logo_web.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos-contacto.css">
+    <script>
+        function validarFormulario() {
+            var nombreApellido = document.querySelector('input[name="nombre_apellido"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var telefono = document.querySelector('input[name="telefono"]').value;
+            var motivo = document.querySelector('select[name="motivo"]').value;
+
+            // Validar que el campo de nombre y apellido no esté vacío
+            if (nombreApellido.trim() === "") {
+                alert("Por favor, ingresa tu nombre y apellido.");
+                return false;
+            }
+
+            // Validar el formato del correo electrónico
+            var emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+            if (!emailRegex.test(email)) {
+                alert("Por favor, ingresa una dirección de correo electrónico válida.");
+                return false;
+            }
+
+            // Validar que el campo de teléfono contenga solo números
+            if (!/^\d+$/.test(telefono)) {
+                alert("El campo de teléfono debe contener solo números.");
+                return false;
+            }
+
+            // Validar que se haya seleccionado un motivo
+            if (motivo === "") {
+                alert("Por favor, selecciona un motivo.");
+                return false;
+            }
+
+            // Si todas las validaciones pasan, mostrar un mensaje de agradecimiento
+            window.alert("Tus datos se ingresaron correctamente. ¡Gracias!");
+
+            return true;
+        }
+    </script>
+    <title>Callejeritos - Contactános</title>
+</head>
+
+<body>
+
+    <header>
+        <!--ENCABEZADO-->
+        <div class="menu" id="menu">
+            <div class="encabezado">
+
+                <!--ENCABEZADO-->
+
+                <div class="logo">
+                    <img class="marca" src="img/logo20.png" alt="logo de callejeritos">
+                </div>
+
+                <!--Barra de navegación-->
+                <div class="navbar" onclick="mostrarOcultarMenu()">
+                    <img class="patitas" src="img/patita_menu.svg" alt="botón de menú">
+                </div>
+
+                <!--Menú hamburguesa-->
+                <nav id="nav" class="nav">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="registro.html">Registrá un callejero</a></li>
+                        <li><a href="galeria.html">Galeria de imagenes</a></li>
+                        <li><a href="cuidados.html">Cómo cuidarlos</a></li>
+                        <li><a href="contacto.html">Contactános</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main> <!--Contenido principal-->
+        <div class="contenedor">
+            <!--imagen flotante-->
+            <img src="img/contacto.svg" alt="casa" class="imagen_flotante2">
+
+            <div class="titulo">
+                <span class="destacado">Contactanos</span>
+            </div>
+
+            <br><br><br>
+            <div class="form">
+                <form method="get" class="formularioContacto" onsubmit="return validarFormulario();">
+                    <br>
+                    <label for="nombre_apellido">Nombre y Apellido:</label>
+                    <input id="nom_ape" type="text" name="nombre_apellido"
+                        placeholder="Escribe tu nombre y apellido aqui...">
+                    <label for="email">e-mail</label>
+                    <input id="mail" type="text" name="email" placeholder="ejemplo@mail.com...">
+                    <label for="telefono">Telefono</label>
+                    <input id="telef" type="text" name="telefono" placeholder="(011)12345678...">
+                    <label for="motivo">Motivo del contacto:</label>
+                    <select id="contact" name="motivo">
+                        <option value="0">Elige una opción</option>
+                        <option value="adopcion">Adopción</option>
+                        <option value="padrinos">Ser padrino</option>
+                        <option value="donaciones">Donaciones</option>
+                        <option value="registro">Registro de callejeros</option>
+                    </select>
+                    <br>
+                    <label for="tamaño">Comentarios</label>
+                    <textarea id="tamanio" name="comentarios" rows="4" cols="50" maxlength="600"
+                        placeholder="Dejanos tus comentarios..."></textarea>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </form>
+                <!--imagen flotante-->
+            </div>
+
+            <div class="titulo2">
+                <h2> Número 4, Privet Drive.</h2> <br>
+                <h3> 1126018001 </h3> <br>
+                <h3>callejeritos@mail.com</h3>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

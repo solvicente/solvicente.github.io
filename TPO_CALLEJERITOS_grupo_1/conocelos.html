@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/logo_web.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importación de fuentes de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importación de archivos CSS -->
+    <link rel="stylesheet" href="css/estilos-conocelos.css">
+    <title>Callejeritos - Conocélos</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="menu" id="menu">
+            <div class="encabezado">
+
+                <!--ENCABEZADO-->
+
+                <div class="logo">
+                    <img class="marca" src="img/logo20.png" alt="logo de callejeritos">
+                </div>
+
+                <!--Barra de navegación-->
+                <div class="navbar" onclick="mostrarOcultarMenu()">
+                    <img class="patitas" src="img/patita_menu.svg" alt="botón de menú">
+                </div>
+
+                <!--Menú hamburguesa-->
+                <nav id="nav" class="nav">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="registro.html">Registrá un callejero</a></li>
+                        <li><a href="galeria.html">Galeria de imagenes</a></li>
+                        <li><a href="cuidados.html">Cómo cuidarlos</a></li>
+                        <li><a href="contacto.html">Contactános</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contenido principal de la página -->
+        <div class="contenedor-padre-conocelos">
+            <img src="img/conoce_mas.svg" alt="gato" class="gato-flotante">
+            <section class="contenedor-hijo-conocelos">
+                <!-- COn el id que trae de Galeria muestro la imagen del perro -->
+                <article id="info-perro" class="caja-imagen">
+                    <img id="imagen-perro" src=" " alt="">
+                </article>
+                <!-- El nombre del perro -->
+                <div class="boton-nombre-conoce">
+                    <p id="nombre-perro"></p>
+                </div><br>
+                <!-- Y su información detallada -->
+                <article class="caja-texto">
+                    <p id="raza-perro"></p>
+                    <p id="edad-perro"></p>
+                    <p id="sexo-perro"></p>
+                    <p id="tamano-perro"></p>
+                </article>
+                <!-- Botón para obtener características de la raza, consumiendo una API -->
+                <div class="container-caracteristicas-raza">
+                    <article id="breedInfo">
+                        <button type="button" onclick="datosRaza()">Características de la Raza</button>
+                    </article>
+                </div>
+            </section>
+            <!-- Contenedor del mapa de ubicación del perro -->
+            <section class="contenedor-mapa">
+                <!-- Armo el mapa con la URL del array perros.js -->
+                <iframe title="ubicacion" id="mapa-perro" width="100%" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
+    </main>
+    <!-- Importación de archivos JavaScript -->
+    <script src="js/perros.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Obtenemos los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        // Obtenemos el valor del parámetro "id" de la URL, que se utiliza para identificar el perro
+        const perroId = urlParams.get("id");
+        // Buscamos el perro correspondiente en el array "perros" usando su ID
+        const perro = perros.find((p) => p.id == perroId);
+        // Comprobamos si se encontró el perro
+        if (perro) {
+            // Mostramos la imagen, nombre, raza y demas atributos del perro en la página
+            document.getElementById("imagen-perro").src = perro.imagen;
+            document.getElementById("nombre-perro").textContent = `${perro.nombre}`;
+            document.getElementById("raza-perro").textContent = `Raza: ${perro.raza}`;
+            document.getElementById("edad-perro").textContent = `Edad: ${perro.edad} años`;
+            document.getElementById("sexo-perro").textContent = `Sexo: ${perro.sexo}`;
+            document.getElementById("tamano-perro").textContent = `Tamaño: ${perro.tamano}`;
+            // Configuramos el atributo "src" del iframe para cargar el mapa de ubicación del perro
+            const mapaPerro = document.getElementById("mapa-perro");
+            mapaPerro.src = perro.mapa;
+
+        } else {
+            // Si no se encontró el perro, mostramos un mensaje de error
+            alert("No se encontró información para este perro.");
+            // Redirige a la página "galeria.html"
+            window.location.href = "galeria.html";
+        }
+        // Función que se ejecuta cuando se solicitan los datos de la raza del perro
+        const datosRaza = () => {
+            // Comprueba si se ha encontrado información sobre el perro en la página actual
+            if (perro) {
+                // Obtiene el nombre de la raza del perro
+                const breedName = perro.raza;
+                // Obtiene el elemento HTML donde se mostrarán los datos de la raza
+                const breedInfoElement = document.getElementById('breedInfo');
+                // Realiza una solicitud a una API de información de razas de perros
+                fetch(`https://api.thedogapi.com/v1/breeds/search?q=${breedName}`)
+                    .then(response => response.json())
+                    .then(breeds => {
+                        // Comprueba si se encontraron razas de perros en la respuesta
+                        if (breeds.length > 0) {
+                            // Obtiene la primera raza encontrada con el parametro que le pasamos, nuestro perro.raza almacenado en breedName
+                            const breed = breeds[0];
+                            // Muestra la información de la raza en la página
+                            breedInfoElement.innerHTML = `
+                                <p>Nombre de la raza: ${breed.name}</p>
+                                <p>Origen: ${breed.origin}</p>
+                                <p>Temperamento: ${breed.temperament}</p>
+                                <p>Altura: ${breed.height.metric} cm</p>
+                                <p>Peso: ${breed.weight.metric} kg</p>
+                            `;
+                        } else {
+                            // Muestra un mensaje si no se encuentra información para la raza
+                            breedInfoElement.innerHTML = `No se encontró información para la raza ${breedName}.`;
+                        }
+                    })
+                    // Muestra un mensaje de error en caso de un error en la solicitud
+                    .catch(error => {
+                        breedInfoElement.innerHTML = `Error: ${error.message}`;
+                    });
+            } else {
+                // Muestra un mensaje si no se encontró información para el perro
+                alert("No se encontró información para este perro.");
+            }
+        }
+    </script>
+</body>
+
+</html>

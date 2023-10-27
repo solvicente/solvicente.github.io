@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/logo_web.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos-registro.css">
+
+    <title>Callejeritos - Registro</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu" id="menu">
+            <div class="encabezado">
+
+                <!--ENCABEZADO-->
+
+                <div class="logo">
+                    <img class="marca" src="img/logo20.png" alt="logo de callejeritos">
+                </div>
+
+                <!--Barra de navegación-->
+                <div class="navbar" onclick="mostrarOcultarMenu()">
+                    <img class="patitas" src="img/patita_menu.svg" alt="botón de menú">
+                </div>
+
+                <!--Menú hamburguesa-->
+                <nav id="nav" class="nav">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="registro.html">Registrá un callejero</a></li>
+                        <li><a href="galeria.html">Galeria de imagenes</a></li>
+                        <li><a href="cuidados.html">Cómo cuidarlos</a></li>
+                        <li><a href="contacto.html">Contactános</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main> <!--Contenido principal-->
+        <div class="contenedor">
+            <!--imagen flotante-->
+            <img src="img/registro.svg" alt="perro" class="imagen_flotante1">
+
+            <div class="titulo">
+                <span class="destacado">Registrá</span>
+                <span>un callejero</span>
+
+            </div>
+
+            <div class="formulario">
+                <form method="post" class="formularioRegistro">
+
+                    <br>
+                    <label for="lugar">Ubicación</label>
+                    <input type="url" name="ubicacion" id="lugar" placeholder="Ingrese URL de Google Map aqui...">
+
+                    <br>
+                    <label for="foto">Selecciona una imagen: </label>
+                    <input type="file" name="imagen" id="foto" accept="image/*">
+                    <br> <br>
+                    <label for="anios">Edad aproximada:</label>
+                    <select name="edad" id="anios">
+                        <option value="0">Elige una opción</option>
+                        <option value="3">0 a 3 años</option>
+                        <option value="6">3 a 6 años</option>
+                        <option value="mas">Mas de 6 años</option>
+                    </select>
+
+                    <br>
+                    <label for="size">Tamaño:</label>
+                    <select name="tamano" id="size">
+                        <option value="0">Elige una opción</option>
+                        <option value="pequeño">Pequeño</option>
+                        <option value="mediano">Mediano</option>
+                        <option value="grande">Grande</option>
+                    </select>
+
+                    <br>
+                    <label for="coment">Comentarios</label>
+                    <textarea name="comentarios" id="coment" rows="4" cols="50" maxlength="600"
+                        placeholder="Dejanos tus comentarios..."></textarea>
+
+                    <button type="submit">Enviar</button>
+                    <!--<input type="submit" value="Enviar" id="boton">-->
+                    <button type="reset">Borrar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/logo_web.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importación de fuentes de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importación de archivo CSS -->
+    <link rel="stylesheet" href="css/estilos-inicio.css">
+    <title>Callejeritos - Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu" id="menu">
+            <div class="encabezado">
+
+                <!--ENCABEZADO-->
+
+                <div class="logo">
+                    <img class="marca" src="img/logo20.png" alt="logo de callejeritos">
+                </div>
+
+                <!--Barra de navegación-->
+                <div class="navbar" onclick="mostrarOcultarMenu()">
+                    <img class="patitas" src="img/patita_menu.svg" alt="botón de menú">
+                </div>
+
+                <!--Menú hamburguesa-->
+                <nav id="nav" class="nav">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="registro.html">Registrá un callejero</a></li>
+                        <li><a href="galeria.html">Galeria de imagenes</a></li>
+                        <li><a href="cuidados.html">Cómo cuidarlos</a></li>
+                        <li><a href="contacto.html">Contactános</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main> <!--Contenido principal-->
+        <div class="fondo" id="fondo">
+            <div class="contenido">
+                <!--imagen flotante-->
+                <img src="img/gato_inicio.svg" alt="gato" class="imagen_flotante">
+
+                <div class="columna_1">
+                    <div> <!--BOTON 1-->
+                        <button type="button" class="boton_seccion_1" onclick="window.location.href='registro.html'">
+                            <p class="text-serif">Registrá</p>
+                            un callejero
+                        </button>
+                    </div>
+
+                    <div> <!--BOTON 2-->
+                        <button type="button" class="boton_seccion_2" onclick="window.location.href='cuidados.html'">
+                            <p class="text_serif">Aprendé</p>
+                            a cuidarlos
+                        </button>
+                    </div>
+                </div>
+                <!--columna dos-->
+                <div class="columna_2">
+                    <div class="publicidad">
+                        <aside> <!--ESPACIO PUBLICITARIO-->
+                            <iframe width="400" height="300" src="https://www.youtube.com/embed/LMHOsDt7lbs"
+                                title="Sobrecitos Pedigree (comercial &quot;Vueltas&quot;)"                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie"> <!--Pie de página-->
+        <div class="redes-sociales" id="redes-sociales"> <!--Redes sociales-->
+            <a href="https://facebook.com" target="_blank"><img src="/img/fb.svg" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/img/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="/img/ig.svg" alt="Instagram"></a>
+        </div>
+        <p>Soñamos con un mundo donde los callejeros sean incluídos.</p> <!--Misión de la página-->
+        <div class="cpr">&copy; Callejeritos - 2023</div> <!--Copyright-->
+    </footer>
+
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
